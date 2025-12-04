@@ -79,7 +79,6 @@ ReVoid Library is licensed under the GPLv3 license. Please see the license file 
 
 · ReVoid Patcher - Patcher library used by ReVoid
 
-```
 
 ## **Notas sobre los cambios realizados:**
 
