@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - dev
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.REVOID_TOKEN }}
+      
+      # ESTE PASO ES CRÍTICO: Hacer gradlew ejecutable
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      # Configuración básica de Git (sin GPG por ahora)
+      - name: Configure Git
+        run: |
+          git config --global user.name "CUPUL-MIU-04"
+          git config --global user.email "186883140+CUPUL-MIU-04@users.noreply.github.com"
+      
+      - name: Run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.REVOID_TOKEN }}
+        run: npx semantic-release --debug
