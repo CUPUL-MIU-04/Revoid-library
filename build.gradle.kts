@@ -16,6 +16,22 @@ repositories {
     mavenLocal()
     google()
     maven {
+    maven {
+        // Tu repositorio de jadb
+        url = uri("https://maven.pkg.github.com/CUPUL-MIU-04/Revoid-jadb")
+        credentials {
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+    maven {
+        // Tu repositorio de jadb
+        url = uri("https://maven.pkg.github.com/CUPUL-MIU-04/Revoid-jadb")
+        credentials {
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
         // Tu repositorio de revoid-patcher
         url = uri("https://maven.pkg.github.com/cupul-miu-04/revoid-patcher")
         credentials {
