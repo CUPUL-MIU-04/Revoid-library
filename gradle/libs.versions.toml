@@ -17,7 +17,7 @@ apksig = { module = "com.android.tools.build:apksig", version.ref = "android" }
 bcpkix-jdk18on = { module = "org.bouncycastle:bcpkix-jdk18on", version.ref = "bcpkix-jdk18on" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
-jadb = "1.2.1.2.20251203135827-baae9da"
+jadb = { module = "com.revoid:jadb", version.ref = "jadb" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
