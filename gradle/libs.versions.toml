@@ -9,7 +9,7 @@ kotlin = "2.0.20"
 kotlinx-coroutines = "1.8.1"
 kotlinx-serialization = "1.7.1"
 libsu = "5.2.2"
-revoid-patcher = "21.0.0"  # CAMBIADO: revanced-patcher -> revoid-patcher
+revoid-patcher = "1.2.1.2.20251203135827"  # CAMBIADO: revanced-patcher -> revoid-patcher
 
 [libraries]
 apkzlib = { module = "com.android.tools.build:apkzlib", version.ref = "android" }

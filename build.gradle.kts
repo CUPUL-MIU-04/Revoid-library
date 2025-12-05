@@ -32,8 +32,8 @@ repositories {
             password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
         }
     }
-        // Tu repositorio de revoid-patcher
-        url = uri("https://maven.pkg.github.com/cupul-miu-04/revoid-patcher")
+        // Tu repositorio de Revoid-patcher
+        url = uri("https://maven.pkg.github.com/CUPUL-MIU-04/Revoid-patcher")
         credentials {
             username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
             password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
@@ -80,12 +80,12 @@ kotlin {
             implementation(libs.jadb)
             implementation(libs.kotlin.reflect)
             implementation(libs.kotlinx.serialization.json)
-            implementation(libs.revoid.patcher) // CAMBIADO: revanced.patcher -> revoid.patcher
+            // implementation(libs.revoid.patcher) // CAMBIADO: revanced.patcher -> revoid.patcher
         }
 
         commonTest.dependencies {
             implementation(libs.kotlin.test.junit)
-            implementation(libs.revoid.patcher) // CAMBIADO: revanced.patcher -> revoid.patcher
+            // implementation(libs.revoid.patcher) // CAMBIADO: revanced.patcher -> revoid.patcher
         }
     }
 }
@@ -115,7 +115,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/cupul-miu-04/revoid-library")
+            url = uri("https://maven.pkg.github.com/CUPUL-MIU-04/revoid-library")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
                 password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
@@ -129,7 +129,7 @@ publishing {
         pom {
             name = "ReVoid Library"
             description = "Library containing common utilities for ReVoid"
-            url = "https://github.com/cupul-miu-04/revoid-library"
+            url = "https://github.com/CUPUL-MIU-04/revoid-library"
 
             licenses {
                 license {
@@ -140,16 +140,16 @@ publishing {
 
             developers {
                 developer {
-                    id = "cupul-miu-04"
-                    name = "cupul-miu-04"
+                    id = "CUPUL-MIU-04"
+                    name = "CUPUL-MIU-04"
                     email = ""
                 }
             }
 
             scm {
-                connection = "scm:git:git://github.com/cupul-miu-04/revoid-library.git"
-                developerConnection = "scm:git:git@github.com:cupul-miu-04/revoid-library.git"
-                url = "https://github.com/cupul-miu-04/revoid-library"
+                connection = "scm:git:git://github.com/CUPUL-MIU-04/revoid-library.git"
+                developerConnection = "scm:git:git@github.com:CUPUL-MIU-04/revoid-library.git"
+                url = "https://github.com/CUPUL-MIU-04/revoid-library"
             }
         }
     }
